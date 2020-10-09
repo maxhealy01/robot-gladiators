@@ -4,8 +4,15 @@ var randomNumber = function() {
   return value;
 };
 
+var getPlayerName = function() {
+  var name = "";
+  while (name === "" || name === null) {
+    name = prompt("What is your robot's name?");
+  }
+}
+
 var playerInfo = {  
-  name : window.prompt("What is your robot's name?"),
+  name : getPlayerName(),
   health: 100,
   attack: 10,
   money: 10,
@@ -150,10 +157,10 @@ for(var i = 0; i < enemyInfo.length; i++) {
     else {
         window.alert("You have lost your robot in battle! Game Over!");
         break;
-    }
+    };
+}
 endGame();
 startGame();
-}
 };
 
 var endGame = function() {
